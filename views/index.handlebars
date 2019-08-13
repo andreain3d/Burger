@@ -1,25 +1,46 @@
-<h1>Eat Da Burger!</h1>
-
 <div class="container">
     <div class="row">
-        <div class="col-md-3 offset-md-3">
+        <div class="col-md-4 offset-md-4">
+            <div class="mx-auto" style="width: 200px;">
+                <img id="burger-img" src="/assets/images/burger.png" alt="A Burger">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h1 class="text-center">Eat Da Burger!</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 offset-md-2">
             {{#each burgers}}
             {{#unless devoured}}
-            <p>{{this.burger_name}}</p>
+            <div class="whitebg mb-1 p-2">
+                <p>{{this.id}}. {{this.burger_name}}</p>
+                <button type="button" class="btn btn-warning">Devour!</button>
+            </div>
             {{/unless}}
             {{/each}}
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             {{#each burgers}}
             {{#if devoured}}
-            <p>{{this.burger_name}}</p>
+            <div class="yellowbg mb-1 p-2">
+                <p>{{this.id}}. {{this.burger_name}}</p>
+                <button type="button" class="btn btn-warning">Devour!</button>
+            </div>
             {{/if}}
             {{/each}}
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <form></form>
+        <div class="col-md-8 offset-md-2">
+            <form class="mt-1">
+                <div class="form-group">
+                    <textarea class="form-control" id="newBurgerInput" rows="3"
+                        placeholder="Submit a burger you'd like to eat!"></textarea>
+                </div>
+                <button type="submit" class="btn btn-info">Submit!</button>
+            </form>
         </div>
     </div>
 </div>

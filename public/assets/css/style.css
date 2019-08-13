@@ -1,0 +1,17 @@
+body {
+  background: #dae3ea;
+}
+
+#burger-img {
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.whitebg {
+  background: #ffffff;
+}
+
+.yellowbg {
+  background: #fff980;
+}
