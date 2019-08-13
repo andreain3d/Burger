@@ -16,7 +16,7 @@
             {{#unless devoured}}
             <div class="whitebg mb-1 p-2">
                 <p>{{this.id}}. {{this.burger_name}}</p>
-                <button type="button" class="btn btn-warning">Devour!</button>
+                <button type="button" class="btn btn-warning devour-btn" data-id="{{id}}">Devour!</button>
             </div>
             {{/unless}}
             {{/each}}
@@ -34,7 +34,7 @@
     </div>
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <form class="mt-1">
+            <form class="mt-1 burgerForm">
                 <div class="form-group">
                     <textarea class="form-control" id="newBurgerInput" rows="3"
                         placeholder="Submit a burger you'd like to eat!"></textarea>
